@@ -1,5 +1,5 @@
 from django.urls import path
-from theme.views import landingPage, eventsPage, membershipPage, helpPage, homePage
+from eapcwomenministries.views import landingPage, eventsPage, membershipPage, helpPage, homePage
 
 urlpatterns = [
     path('', homePage, name="homepage"),
