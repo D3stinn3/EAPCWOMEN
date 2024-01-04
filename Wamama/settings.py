@@ -126,7 +126,7 @@ STATICFILES_DIRS = [
     BASE_DIR / 'theme' / 'static'
 ]
 
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = BASE_DIR.parent / 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
