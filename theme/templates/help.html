@@ -1,0 +1,420 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <title>EAPCWomen</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+		{% tailwind_css %}
+	</head>
+
+	<body class="bg-gray-50 font-serif leading-normal tracking-normal">
+		<div>
+			<header class="bg-gray-800" x-data="{ isOpen: false }">
+				<nav class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
+					<div class="flex items-center justify-between">
+						<a class="text-xl font-bold text-white transition-colors duration-300 transform md:text-2xl hover:text-indigo-400"
+							href="#">EAPCWomenMinistries</a>
+			
+						<!-- Mobile menu button -->
+						<div @click="isOpen = !isOpen" class="flex md:hidden">
+							<button type="button" class="text-gray-200 hover:text-gray-400 focus:outline-none focus:text-gray-400"
+								aria-label="toggle menu">
+								<svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
+									<path fill-rule="evenodd"
+										d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z">
+									</path>
+								</svg>
+							</button>
+						</div>
+					</div>
+			
+					<!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+					<div :class="isOpen ? 'flex' : 'hidden'"
+						class="flex-col mt-2 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0">
+						<a class="text-sm font-medium text-gray-200 transition-colors duration-300 transform hover:text-indigo-400"
+							href="{% url 'landingpage' %}">Nyumbani</a>
+						<a class="text-sm font-medium text-gray-200 transition-colors duration-300 transform hover:text-indigo-400"
+							href="{% url 'eventspage' %}">Mikutano</a>
+						<a class="text-sm font-medium text-gray-200 transition-colors duration-300 transform hover:text-indigo-400"
+							href="{% url 'membershippage' %}">Wanachama</a>
+						<a class="text-sm font-medium text-gray-200 transition-colors duration-300 transform hover:text-indigo-400"
+							href="{% url 'helppage' %}">Usaidizi</a>
+						<a class="px-4 py-1 text-sm font-medium text-center text-gray-200 transition-colors duration-300 transform border rounded hover:bg-indigo-400"
+							href="#">Tufikie</a>
+					</div>
+				</nav>
+
+			<section class="bg-white">
+				<div class="max-w-5xl px-6 py-16 mx-auto text-center">
+					<h2 class="text-3xl font-semibold text-gray-800">Usaidizi</h2>
+					<p class="max-w-lg mx-auto mt-4 text-gray-600">Galatians 3:28 (NIV)</p>
+			
+					<img class="object-cover object-center w-full mt-16 rounded-md shadow h-80"
+						src="https://images.unsplash.com/photo-1508785166660-30ce4484f45c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+				</div>
+			</section>
+			
+				<section class="flex items-center justify-center" style="height: 500px;">
+					<div class="text-center">
+						<p class="text-xl font-medium tracking-wider text-gray-300">The EAPCWomenMinistries</p>
+						<h2 class="mt-6 text-3xl font-bold text-white md:text-5xl">The Women and Ladies of Faith</h2>
+			
+						<div class="flex justify-center mt-8">
+							<a class="px-8 py-2 text-lg font-medium text-white transition-colors duration-300 transform bg-indigo-600 rounded hover:bg-indigo-500"
+								href="#">Get In Touch</a>
+						</div>
+					</div>
+				</section>
+			</header>
+
+			<section class="bg-white">
+				<div class="max-w-5xl px-6 py-16 mx-auto space-y-8 md:flex md:items-center md:space-y-0">
+					<div class="md:w-2/3">
+						<div class="hidden md:flex md:items-center md:space-x-10">
+							<img class="object-cover object-center rounded-md shadow w-72 h-72"
+								src="https://images.unsplash.com/photo-1444664361762-afba083a4d77?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+							<img class="object-cover object-center w-64 rounded-md shadow h-96"
+								src="https://images.unsplash.com/photo-1444664361762-afba083a4d77?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+						</div>
+					</div>
+					<div class="md:w-1/3">
+						<img class="object-cover object-center w-full rounded-md shadow" style="height: 700px;"
+							src="https://images.unsplash.com/photo-1444664361762-afba083a4d77?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+					</div>
+				</div>
+			</section>
+
+            <!-- ====== FAQ Section Start -->
+            <section
+            x-data="
+            {
+            openFaq1: false, 
+            openFaq2: false, 
+            openFaq3: false, 
+            openFaq4: false, 
+            openFaq5: false, 
+            openFaq6: false
+            }
+            "
+            class="relative z-20 overflow-hidden bg-white dark:bg-dark pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]"
+            >
+            <div class="container mx-auto">
+                <div class="flex flex-wrap -mx-4">
+                    <div class="w-full px-4">
+                        <div class="mx-auto mb-[60px] max-w-[520px] text-center lg:mb-20">
+                        <span class="block mb-2 text-lg font-semibold text-primary">
+                        FAQ
+                        </span>
+                        <h2
+                            class="text-dark dark:text-white mb-4 text-3xl font-bold sm:text-[40px]/[48px]"
+                            >
+                            Una Maswali? Uliza Hapa
+                        </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap -mx-4">
+                    <div class="w-full px-4 lg:w-1/2">
+                        <div
+                        class="w-full p-4 mb-8 bg-white rounded-lg shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] dark:bg-dark-2 sm:p-8 lg:px-6 xl:px-8"
+                        >
+                        <button
+                            class="flex w-full text-left faq-btn"
+                            @click="openFaq1 = !openFaq1"
+                            >
+                            <div
+                                class="bg-primary/5 dark:bg-white/5 text-primary mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg"
+                                >
+                                <svg
+                                    :class="openFaq1 && 'rotate-180'"
+                                    width="22"
+                                    height="22"
+                                    viewBox="0 0 22 22"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                    <path
+                                    d="M11 15.675C10.7937 15.675 10.6219 15.6062 10.45 15.4687L2.54374 7.69998C2.23436 7.3906 2.23436 6.90935 2.54374 6.59998C2.85311 6.2906 3.33436 6.2906 3.64374 6.59998L11 13.7844L18.3562 6.53123C18.6656 6.22185 19.1469 6.22185 19.4562 6.53123C19.7656 6.8406 19.7656 7.32185 19.4562 7.63123L11.55 15.4C11.3781 15.5719 11.2062 15.675 11 15.675Z"
+                                    fill="currentColor"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="w-full">
+                                <h4
+                                    class="mt-1 text-lg font-semibold text-dark dark:text-white"
+                                    >
+                                    Tulianza Lini?
+                                </h4>
+                            </div>
+                        </button>
+                        <div x-show="openFaq1" class="faq-content pl-[62px]">
+                            <p
+                                class="py-3 text-base leading-relaxed text-body-color dark:text-dark-6"
+                                >
+                                Mwaka ni wa 2018
+                            </p>
+                        </div>
+                        </div>
+                        <div
+                        class="w-full p-4 mb-8 bg-white rounded-lg shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] dark:bg-dark-2 sm:p-8 lg:px-6 xl:px-8"
+                        >
+                        <button
+                            class="flex w-full text-left faq-btn"
+                            @click="openFaq2 = !openFaq2"
+                            >
+                            <div
+                                class="bg-primary/5 dark:bg-white/5 text-primary mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg"
+                                >
+                                <svg
+                                    :class="openFaq2 && 'rotate-180'"
+                                    width="22"
+                                    height="22"
+                                    viewBox="0 0 22 22"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                    <path
+                                    d="M11 15.675C10.7937 15.675 10.6219 15.6062 10.45 15.4687L2.54374 7.69998C2.23436 7.3906 2.23436 6.90935 2.54374 6.59998C2.85311 6.2906 3.33436 6.2906 3.64374 6.59998L11 13.7844L18.3562 6.53123C18.6656 6.22185 19.1469 6.22185 19.4562 6.53123C19.7656 6.8406 19.7656 7.32185 19.4562 7.63123L11.55 15.4C11.3781 15.5719 11.2062 15.675 11 15.675Z"
+                                    fill="currentColor"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="w-full">
+                                <h4
+                                    class="mt-1 text-lg font-semibold text-dark dark:text-white"
+                                    >
+                                    Wanachama Ni Wangapi?
+                                </h4>
+                            </div>
+                        </button>
+                        <div x-show="openFaq2" class="faq-content pl-[62px]">
+                            <p
+                                class="py-3 text-base leading-relaxed text-body-color dark:text-dark-6"
+                                >
+                                Tumekadiria idadi ya wanachama elfu moja.
+                            </p>
+                        </div>
+                        </div>
+                        <div
+                        class="w-full p-4 mb-8 bg-white rounded-lg shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] dark:bg-dark-2 sm:p-8 lg:px-6 xl:px-8"
+                        >
+                        <button
+                            class="flex w-full text-left faq-btn"
+                            @click="openFaq3 = !openFaq3"
+                            >
+                            <div
+                                class="bg-primary/5 dark:bg-white/5 text-primary mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg"
+                                >
+                                <svg
+                                    :class="openFaq3 && 'rotate-180'"
+                                    width="22"
+                                    height="22"
+                                    viewBox="0 0 22 22"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                    <path
+                                    d="M11 15.675C10.7937 15.675 10.6219 15.6062 10.45 15.4687L2.54374 7.69998C2.23436 7.3906 2.23436 6.90935 2.54374 6.59998C2.85311 6.2906 3.33436 6.2906 3.64374 6.59998L11 13.7844L18.3562 6.53123C18.6656 6.22185 19.1469 6.22185 19.4562 6.53123C19.7656 6.8406 19.7656 7.32185 19.4562 7.63123L11.55 15.4C11.3781 15.5719 11.2062 15.675 11 15.675Z"
+                                    fill="currentColor"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="w-full">
+                                <h4
+                                    class="mt-1 text-lg font-semibold text-dark dark:text-white"
+                                    >
+                                    Ofisi Zetu Zinapatikana Wapi?
+                                </h4>
+                            </div>
+                        </button>
+                        <div x-show="openFaq3" class="faq-content pl-[62px]">
+                            <p
+                                class="py-3 text-base leading-relaxed text-body-color dark:text-dark-6"
+                                >
+                                Meru, Meru County
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="w-full px-4 lg:w-1/2">
+                        <div
+                        class="w-full p-4 mb-8 bg-white rounded-lg shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] dark:bg-dark-2 sm:p-8 lg:px-6 xl:px-8"
+                        >
+                        <button
+                            class="flex w-full text-left faq-btn"
+                            @click="openFaq4 = !openFaq4"
+                            >
+                            <div
+                                class="bg-primary/5 dark:bg-white/5 text-primary mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg"
+                                >
+                                <svg
+                                    :class="openFaq4 && 'rotate-180'"
+                                    width="22"
+                                    height="22"
+                                    viewBox="0 0 22 22"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                    <path
+                                    d="M11 15.675C10.7937 15.675 10.6219 15.6062 10.45 15.4687L2.54374 7.69998C2.23436 7.3906 2.23436 6.90935 2.54374 6.59998C2.85311 6.2906 3.33436 6.2906 3.64374 6.59998L11 13.7844L18.3562 6.53123C18.6656 6.22185 19.1469 6.22185 19.4562 6.53123C19.7656 6.8406 19.7656 7.32185 19.4562 7.63123L11.55 15.4C11.3781 15.5719 11.2062 15.675 11 15.675Z"
+                                    fill="currentColor"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="w-full">
+                                <h4
+                                    class="mt-1 text-lg font-semibold text-dark dark:text-white"
+                                    >
+                                    Tuna Washirika Wangapi?
+                                </h4>
+                            </div>
+                        </button>
+                        <div x-show="openFaq4" class="faq-content pl-[62px]">
+                            <p
+                                class="py-3 text-base leading-relaxed text-body-color dark:text-dark-6"
+                                >
+                                Tumekadiria elfu mia moja sasa.
+                            </p>
+                        </div>
+                        </div>
+                        <div
+                        class="w-full p-4 mb-8 bg-white rounded-lg shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] dark:bg-dark-2 sm:p-8 lg:px-6 xl:px-8"
+                        >
+                        <button
+                            class="flex w-full text-left faq-btn"
+                            @click="openFaq5 = !openFaq5"
+                            >
+                            <div
+                                class="bg-primary/5 dark:bg-white/5 text-primary mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg"
+                                >
+                                <svg
+                                    :class="openFaq5 && 'rotate-180'"
+                                    width="22"
+                                    height="22"
+                                    viewBox="0 0 22 22"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                    <path
+                                    d="M11 15.675C10.7937 15.675 10.6219 15.6062 10.45 15.4687L2.54374 7.69998C2.23436 7.3906 2.23436 6.90935 2.54374 6.59998C2.85311 6.2906 3.33436 6.2906 3.64374 6.59998L11 13.7844L18.3562 6.53123C18.6656 6.22185 19.1469 6.22185 19.4562 6.53123C19.7656 6.8406 19.7656 7.32185 19.4562 7.63123L11.55 15.4C11.3781 15.5719 11.2062 15.675 11 15.675Z"
+                                    fill="currentColor"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="w-full">
+                                <h4
+                                    class="mt-1 text-lg font-semibold text-dark dark:text-white"
+                                    >
+                                    Ushawishi Kwa Wanawake Waliotaka Kujiunga?
+                                </h4>
+                            </div>
+                        </button>
+                        <div x-show="openFaq5" class="faq-content pl-[62px]">
+                            <p
+                                class="py-3 text-base leading-relaxed text-body-color dark:text-dark-6"
+                                >
+                                Jaza Fomu iliopewa hapa ili kujisajili ukifuata maelezo.
+                            </p>
+                        </div>
+                        </div>
+                        <div
+                        class="w-full p-4 mb-8 bg-white rounded-lg shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] dark:bg-dark-2 sm:p-8 lg:px-6 xl:px-8"
+                        >
+                        <button
+                            class="flex w-full text-left faq-btn"
+                            @click="openFaq6 = !openFaq6"
+                            >
+                            <div
+                                class="bg-primary/5 dark:bg-white/5 text-primary mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg"
+                                >
+                                <svg
+                                    :class="openFaq6 && 'rotate-180'"
+                                    width="22"
+                                    height="22"
+                                    viewBox="0 0 22 22"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                    <path
+                                    d="M11 15.675C10.7937 15.675 10.6219 15.6062 10.45 15.4687L2.54374 7.69998C2.23436 7.3906 2.23436 6.90935 2.54374 6.59998C2.85311 6.2906 3.33436 6.2906 3.64374 6.59998L11 13.7844L18.3562 6.53123C18.6656 6.22185 19.1469 6.22185 19.4562 6.53123C19.7656 6.8406 19.7656 7.32185 19.4562 7.63123L11.55 15.4C11.3781 15.5719 11.2062 15.675 11 15.675Z"
+                                    fill="currentColor"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="w-full">
+                                <h4
+                                    class="mt-1 text-lg font-semibold text-dark dark:text-white"
+                                    >
+                                    Mashirika Mangapi Mliojiunga Nao?
+                                </h4>
+                            </div>
+                        </button>
+                        <div x-show="openFaq6" class="faq-content pl-[62px]">
+                            <p
+                                class="py-3 text-base leading-relaxed text-body-color dark:text-dark-6"
+                                >
+                                Mashirika manane na hesabu.
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-0 right-0 z-[-1]">
+                <svg
+                    width="1440"
+                    height="886"
+                    viewBox="0 0 1440 886"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    >
+                    <path
+                        opacity="0.5"
+                        d="M193.307 -273.321L1480.87 1014.24L1121.85 1373.26C1121.85 1373.26 731.745 983.231 478.513 729.927C225.976 477.317 -165.714 85.6993 -165.714 85.6993L193.307 -273.321Z"
+                        fill="url(#paint0_linear)"
+                        />
+                    <defs>
+                        <linearGradient
+                        id="paint0_linear"
+                        x1="1308.65"
+                        y1="1142.58"
+                        x2="602.827"
+                        y2="-418.681"
+                        gradientUnits="userSpaceOnUse"
+                        >
+                        <stop stop-color="#3056D3" stop-opacity="0.36" />
+                        <stop offset="1" stop-color="#F5F2FD" stop-opacity="0" />
+                        <stop offset="1" stop-color="#F5F2FD" stop-opacity="0.096144" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            </section>
+            <!-- ====== FAQ Section End -->
+
+			<section class="bg-white">
+				<div class="max-w-5xl px-6 py-16 mx-auto">
+					<div class="px-8 py-12 bg-gray-800 rounded-md md:px-20 md:flex md:items-center md:justify-between">
+						<div>
+							<h3 class="text-2xl font-semibold text-white">Picha Zetu</h3>
+							<p class="max-w-md mt-4 text-gray-400">Immerse yourself in the vibrant experiences of EAPCWomen. Our image gallery showcases events, members, and leaders, offering a visual journey through our community. Enjoy features like zoom, slideshows, and organized categorization.</p>
+						</div>
+			
+						<a class="block px-8 py-2 mt-6 text-lg font-medium text-center text-white transition-colors duration-300 transform bg-indigo-600 rounded md:mt-0 hover:bg-indigo-500"
+							href="#">Pata Picha</a>
+					</div>
+				</div>
+			</section>
+			
+			<footer class="border-t">
+				<div class="container flex items-center justify-between px-6 py-8 mx-auto">
+					<p class="text-gray-500">© 2024 All Rights Reserved.</p>
+					<p class="font-medium text-gray-700">A Product of BBS</p>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

@@ -5,3 +5,15 @@ from django.contrib.auth import authenticate, login, logout
 def landingPage(request):
     context = {}
     return render(request, 'base.html', context)
+
+def eventsPage(request):
+    context = {}
+    return render(request, 'events.html', context)
+
+def membershipPage(request):
+    context = {}
+    return render(request, 'membership.html', context)
+
+def helpPage(request):
+    context = {}
+    return render(request, 'help.html', context)
