@@ -1,1 +1,1 @@
-web: gunicorn Wamama.wsgi --log-file -
+web: python manage.py collectstatic && gunicorn Wamama.wsgi --log-file -
