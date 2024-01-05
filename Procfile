@@ -1,1 +1,1 @@
-web: gunicorn Wamama.wsgi --log-file -
+web: python manage.py makemigrations && python manage.py migrate && gunicorn Wamama.wsgi --log-file -
