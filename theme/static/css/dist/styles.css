@@ -1102,6 +1102,11 @@ select {
   border-radius: 0.375rem;
 }
 
+.rounded-t-lg {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -1159,6 +1164,11 @@ select {
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.object-none {
+  -o-object-fit: none;
+     object-fit: none;
 }
 
 .object-center {
